@@ -1,0 +1,60 @@
+@import url('http://fonts.cdnfonts.com/css/neue-haas-grotesk-text-pro');
+* {
+    font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
+    font-weight: 700 !important;
+}
+body {
+    background-color: #F88C8C;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+main {
+    position: relative;
+}
+#hero {
+    height: 100vh;
+    width: 100vw;
+}
+#scrollview {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 100vh;
+}
+#main-headline {
+    font-size: 20vw;
+    font-family: Neue Haas Grotesk Text Pro;
+    color: #FF0000
+}
+#signin-btn {
+    float: left;
+    background-color: #4f4cec
+}
+.btn-primary {
+    background-color: #4f4cec !important;
+}
+@media only screen and (max-width: 800px) {
+    #hero {
+        visibility: hidden;
+        height: inherit;
+    }
+    #main-headline {
+        visibility: visible;
+    }
+    .card-text {
+        float: none !important;
+        font-size: 4vw !important;
+    }
+    #tell-aisd-no {
+        font-size: 6vw !important;
+    }
+    #comment {
+        font-size: 3.25vw;
+        padding-left: 7.5vw;
+    }
+} 
+/*
+@media only screen and (min-width: 2000px) {
+    #main-headline {
+        font-size: 10vw;
+    }
+}*/
