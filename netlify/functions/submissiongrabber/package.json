@@ -1,0 +1,16 @@
+{
+  "name": "submissiongrabber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "submissiongrabber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "netlify": "^6.1.29",
+    "node-fetch": "^2.6.1"
+  }
+}

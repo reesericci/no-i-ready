@@ -1,0 +1,16 @@
+{
+  "name": "check-if-signed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "check-if-signed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "netlify": "^6.1.29",
+    "node-fetch": "^2.6.1"
+  }
+}
