@@ -1,0 +1,23 @@
+{
+  "name": "no-i-ready",
+  "version": "1.0.0",
+  "description": "say NO to I-Ready",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reesericci/no-i-ready.git"
+  },
+  "author": "reesericci",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/reesericci/no-i-ready/issues"
+  },
+  "homepage": "https://github.com/reesericci/no-i-ready#readme",
+  "dependencies": {
+    "netlify": "^6.1.29",
+    "node-fetch": "^2.6.1"
+  }
+}
