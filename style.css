@@ -32,6 +32,13 @@ main {
 .btn-primary {
     background-color: #4f4cec !important;
 }
+
+comment-message {
+    background-color: #fff;
+}
+textarea {
+    background-color: #ffffff85 !important;
+}
 @media only screen and (max-width: 800px) {
     #hero {
         visibility: hidden;

@@ -9,6 +9,7 @@
     <title>say NO to I-Ready</title>
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/commonmark@0.29.3/dist/commonmark.js"></script>
     <!-- Primary Meta Tags -->
     <title>say NO to I-Ready</title>
     <meta name="title" content="say NO to I-Ready">
@@ -79,7 +80,26 @@
           </center>
         </div>
       </div>
-      <center style="font-size: 1.25vw; position: absolute; bottom: 0.5rem; left: 50vw; margin-left: auto; margin-right: auto; left: 0; right: 0;">Made with <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;"><path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#e25555"></path></svg> by <a href="https://github.com/reesericci" target="_blank">@reesericci</center></a>
+      <div class="container-md" style="margin-top: 5vw; padding-left:10vw;padding-right: 10vw;">
+        <h1 class="text-center">Comment Section</h1>
+        <form netlify name="comments-queue">
+          <input type="hidden" name="form-name" value="comments-queue">
+          <div class="mb-3">
+          <textarea class="form-control" placeholder="Markdown is cool" rows="4" name="comment" id="comment"></textarea>
+          </div>
+          <input type="hidden" name="name">
+          <input type="hidden" name="email">
+          <input type="hidden" name="date">
+          <div class="mb-3">
+          <button type="submit" class="form-control btn btn-primary">Post your comment</button>
+          </div>
+        </form>
+        <div class="mb-3" id="comment-login" style="display: none;"><button class="btn btn-primary form-control" style="background-color: #2f2da3 !important;" onclick="netlifyIdentity.open()">Sign up/log in to post your comment</button></div>
+        <hr>
+        <div id="comments">
+        </div>
+      </div>
+      <center style="font-size: 1.25vw; position: relative; bottom: 0.5rem; left: 50vw; margin-left: auto; margin-right: auto; left: 0; right: 0;">Made with <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;"><path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#e25555"></path></svg> by <a href="https://github.com/reesericci" target="_blank">@reesericci</center></a>
     </main>
     <form name="petition" style="display: none;" method="POST" data-netlify="true" netlify>
       <input type="hidden" name="form-name" value="petition" />
