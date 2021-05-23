@@ -1,6 +1,6 @@
 var reader = new commonmark.Parser({smart: true});
 var writer = new commonmark.HtmlRenderer({softbreak: "<br />", safe: true});
-
+let user;
 let signers;
 let alreadySigned;
 var alert = document.querySelector("[role='alert']")
@@ -12,7 +12,7 @@ function loggedIn() {
     netlifyIdentity.open();
     user = netlifyIdentity.currentUser();
     document.getElementById("signin-btn").style.display = 'none';
-    fetch('.netlify/functions/check-if-signed?email=' + user.email + '&name=' + user.user_metadata)
+    fetch('.netlify/functions/check-if-signed?email=' + user.email + '&name=' + user.user_metadata.full_name)
     .then(response => response.text())
     .then(data => {
         alreadySigned = data;
