@@ -1,5 +1,5 @@
 var reader = new commonmark.Parser({smart: true});
-var writer = new commonmark.HtmlRenderer({softbreak: "<br />"});
+var writer = new commonmark.HtmlRenderer({softbreak: "<br />", safe: true});
 
 let signers;
 let alreadySigned;
