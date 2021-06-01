@@ -89,6 +89,14 @@ const commentSubmit = (e) => {
     formData.set("name",user.user_metadata.full_name);
     formData.set("email",user.email);
     formData.set("date", date.toDateString())
+    if (formData.comment == null) {
+	alert.classList.remove("bg-success")
+        alert.classList.add("bg-danger")
+        document.getElementById("toast-body").innerHTML = "Could not submit empty comment";
+        toast = new bootstrap.Toast(alert);
+        toast.show();
+	throw new Error("empty comment");
+    }
     fetch('/', {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
