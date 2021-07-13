@@ -22,7 +22,7 @@ main {
 }
 #main-headline {
     font-size: 20vw;
-    font-family: Neue Haas Grotesk Text Pro;
+    font-family: 'Neue Haas Grotesk Text Pro';
     color: #FF0000
 }
 #signin-btn {
