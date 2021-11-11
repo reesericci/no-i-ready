@@ -47,7 +47,7 @@ textarea {
 
 
 #main-headline span:before {
-    content: "I-Ready";
+    content: "";
     animation: wordSwitch 5s infinite;
     margin-left: 5px;
   }
@@ -58,11 +58,20 @@ textarea {
     }
 
     25% {
+      text-decoration: line-through;
       content: "I-Ready";
     }
-    
+    49% {
+        content: "MAP";
+        text-decoration: normal;
+    }
     50% {
       content: "MAP";
+      text-decoration: normal;
+    }
+    51% {
+        content: "MAP";
+        text-decoration: normal;
     }
     
     75% {
