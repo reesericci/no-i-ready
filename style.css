@@ -16,7 +16,7 @@ main {
     width: 100vw;
 }
 #scrollview {
-    padding-top: 2rem;
+    padding-top: 10rem;
     padding-bottom: 2rem;
     height: 100vh;
 }
@@ -44,6 +44,37 @@ textarea {
     transition: ease;
     transition-duration: 0.5s;
 }
+
+
+#main-headline span:before {
+    content: "I-Ready";
+    animation: wordSwitch 5s infinite;
+    margin-left: 5px;
+  }
+  
+  @keyframes wordSwitch{
+    0% {
+      content: "SLO/SCA";
+    }
+
+    25% {
+      content: "I-Ready";
+    }
+    
+    50% {
+      content: "MAP";
+    }
+    
+    75% {
+      content: "STAAR";
+    }
+    
+    100% {
+      content: "SLO/SCA";
+    }
+    
+  }
+
 @media only screen and (max-width: 800px) {
     #hero {
         visibility: hidden;
