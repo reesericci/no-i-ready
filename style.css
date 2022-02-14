@@ -62,24 +62,24 @@ textarea {
       content: "I-Ready";
     }
     49% {
-        content: "MAP";
+        content: "IXL";
         text-decoration: normal;
     }
     50% {
-      content: "MAP";
+      content: "IXL";
       text-decoration: normal;
     }
     51% {
-        content: "MAP";
+        content: "IXL";
         text-decoration: normal;
     }
     
     75% {
-      content: "STAAR";
+      content: "MAP";
     }
     
     100% {
-      content: "SLO/SCA";
+      content: "STAAR";
     }
     
   }
