@@ -1,7 +1,8 @@
 <script>
 	export { text, strikethrough };
 	import { onMount, afterUpdate } from 'svelte';
-	import { blur } from 'svelte/transition'
+	import { blur, fly } from 'svelte/transition'
+	import { quintOut } from 'svelte/easing';
 	
 	let text = [];
 	let strikethrough = []
@@ -14,7 +15,7 @@
 			strikethoughSet.add(el)
 		})
 
-		let interval = setInterval(updateText, 1000)
+		let interval = setInterval(updateText, 2000)
 	});
 		
 	function updateText() {
@@ -38,7 +39,7 @@
 	say NO to	
 	</h1>
 	{#key currentIndex}
-		<h1 id="animatedText" in:blur="{{amount: 10}}">
+		<h1 id="animatedText" in:fly="{{ delay: 500, x: -1000, duration: 500, opacity: 1}}" out:fly="{{ x: 1000, duration: 500, opacity: 1}}">
 			{text[currentIndex]}
 		</h1>
 	{/key}
