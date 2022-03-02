@@ -11,19 +11,11 @@ body {
 main {
     position: relative;
 }
-#hero {
-    height: 100vh;
-    width: 100vw;
-}
+
 #scrollview {
     padding-top: 10rem;
     padding-bottom: 2rem;
     height: 100vh;
-}
-#main-headline {
-    font-size: 20vw;
-    font-family: 'Neue Haas Grotesk Text Pro';
-    color: #FF0000
 }
 #signin-btn {
     float: left;
@@ -45,53 +37,7 @@ textarea {
     transition-duration: 0.5s;
 }
 
-
-#main-headline span:before {
-    content: "";
-    animation: wordSwitch 5s infinite;
-    margin-left: 5px;
-  }
-  
-  @keyframes wordSwitch{
-    0% {
-      content: "SLO/SCA";
-    }
-
-    25% {
-      text-decoration: line-through;
-      content: "I-Ready";
-    }
-    49% {
-        content: "IXL";
-        text-decoration: normal;
-    }
-    50% {
-      content: "IXL";
-      text-decoration: normal;
-    }
-    51% {
-        content: "IXL";
-        text-decoration: normal;
-    }
-    
-    75% {
-      content: "MAP";
-    }
-    
-    100% {
-      content: "STAAR";
-    }
-    
-  }
-
 @media only screen and (max-width: 800px) {
-    #hero {
-        visibility: hidden;
-        height: inherit;
-    }
-    #main-headline {
-        visibility: visible;
-    }
     .card-text {
         float: none !important;
         font-size: 4vw !important;
