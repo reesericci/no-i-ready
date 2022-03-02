@@ -57,6 +57,7 @@
 			font-weight: 700;
 			color: #FF0000;
 			margin-left: 5px;
+			text-align: center;
 	}
 	
 	@media only screen and (max-width: 800px) {
