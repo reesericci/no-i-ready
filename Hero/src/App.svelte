@@ -18,12 +18,6 @@
 		})
 
 		let interval = setInterval(updateText, 2000)
-
-		if(strikethoughSet.has(text[currentIndex])) {
-			currentStrike = true;
-		} else {
-			currentStrike = false;
-		}
 	});
 		
 	function updateText() {
@@ -39,6 +33,10 @@
 		} else {
 			currentStrike = false;
 		}
+
+	$: {
+		console.log(currentStrike)
+	}
 </script>
 
 
@@ -72,7 +70,7 @@
 	.currentStrike {
 		text-decoration: line-through;
 	}
-
+	
 	@media only screen and (max-width: 800px) {
 			main {
 					visibility: hidden;
