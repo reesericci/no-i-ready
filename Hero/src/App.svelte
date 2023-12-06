@@ -1,8 +1,8 @@
 <script>
 	export { text, strikethrough };
-	import { onMount, afterUpdate, tick } from 'svelte';
-	import { fly } from 'svelte/transition'
-	import sleep from 'ko-sleep'
+	import { onMount, afterUpdate } from 'svelte';
+	import { blur, fly } from 'svelte/transition'
+	import { quintOut } from 'svelte/easing';
 	
 	let text = [];
 	let strikethrough = []
@@ -26,9 +26,8 @@
 		}
 	}
 	
-	afterUpdate(async () => {
+	afterUpdate(() => {
 		if(strikethoughSet.has(text[currentIndex])) {
-			await tick();
 			document.getElementById("animatedText").style.textDecoration = "line-through";
 		}
 	})
