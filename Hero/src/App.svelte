@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	export { text, strikethrough };
 	import { onMount, afterUpdate, tick } from 'svelte';
 	import { fly } from 'svelte/transition'
@@ -6,8 +6,6 @@
 	
 	let text = [];
 	let strikethrough = []
-	let currentStrike = false;
-
 
 	const strikethoughSet = new Set()
 	let currentIndex = 0;
@@ -27,25 +25,22 @@
 			currentIndex += 1
 		}
 	}
-
-	$: if(strikethoughSet.has(text[currentIndex])) {
-			currentStrike = true;
-		} else {
-			currentStrike = false;
+	
+	function strikethroughUpdate() {
+		console.log("yay")
+		if(strikethoughSet.has(text[currentIndex])) {
+			document.getElementById("animatedText").style.textDecoration = "line-through";
 		}
-
-	$: {
-		console.log(currentStrike)
 	}
-</script>
 
+</script>
 
 <main>
 	<h1>
 	say NO to	
 	</h1>
 	{#key currentIndex}
-		<h1 class:currentStrike id="animatedText" in:fly="{{ delay: 500, x: -1000, duration: 500, opacity: 1}}" out:fly="{{ x: 1000, duration: 500, opacity: 1}}">
+		<h1 on:load={strikethroughUpdate} id="animatedText" in:fly="{{ delay: 500, x: -1000, duration: 500, opacity: 1}}" out:fly="{{ x: 1000, duration: 500, opacity: 1}}">
 			{text[currentIndex]}
 		</h1>
 	{/key}
@@ -65,10 +60,6 @@
 			color: #FF0000;
 			margin-left: 5px;
 			text-align: center;
-	}
-
-	.currentStrike {
-		text-decoration: line-through;
 	}
 	
 	@media only screen and (max-width: 800px) {
