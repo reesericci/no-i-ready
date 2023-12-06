@@ -49,6 +49,10 @@ textarea {
         font-size: 3.25vw;
         padding-left: 7.5vw;
     }
+} 
+
+
+@media only screen and (max-width: 1200px) and (min-width: 815px) {
     #scrollview {
         padding-top: 3rem;
     }
